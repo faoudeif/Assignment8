@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.33, for Linux (x86_64)
 --
 -- Host: localhost    Database: ajax_assignment
 -- ------------------------------------------------------
--- Server version	5.7.22-0ubuntu0.16.04.1
+-- Server version       5.7.33-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -18,6 +18,11 @@
 --
 -- Table structure for table `names`
 --
+CREATE DATABASE IF NOT EXISTS ajax_assignment;
+
+USE ajax_assignment;
+
+
 
 DROP TABLE IF EXISTS `names`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -26,7 +31,7 @@ CREATE TABLE `names` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -35,7 +40,7 @@ CREATE TABLE `names` (
 
 LOCK TABLES `names` WRITE;
 /*!40000 ALTER TABLE `names` DISABLE KEYS */;
-INSERT INTO `names` VALUES (1,'Shaper, Scott'),(2,'Adams, Amy'),(3,'Zebra, Zeb'),(4,'Doe, John'),(5,'Doe, Jane'),(6,'Smith, Mark'),(7,'Smith, Jack'),(8,'Samson, John'),(9,'Bedford, Betty'),(10,'Johnson, Mark');
+INSERT INTO `names` VALUES (1,'Shaper, Scott'),(2,'Shaper, Karen'),(3,'Zebra, Zeb');
 /*!40000 ALTER TABLE `names` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +53,5 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-27 19:58:56
+-- Dump completed on 2021-03-30  0:20:46
+root@cps276:/var/www/html/cps276/cps276_assignments/assignment8_ajax#

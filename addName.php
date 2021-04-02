@@ -7,7 +7,7 @@ $data = json_decode($_POST['data']);
 
 $name = $data->name;
 
-$nameArr = explode("", $name);
+$nameArr = explode(" ", $name);
 
 $name  = "{$nameArr[1]}, {$nameArr[0]}";
 

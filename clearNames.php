@@ -3,14 +3,9 @@ require_once '../classes/Pdo_methods.php';
 
 $pdo = new PdoMethods();
 
-$sql = "DELETE FROM names WHERE name = :name";
+$sql = "TRUNCATE TABLE names";
 				
-$bindings = [
-    [':name', $name, 'str'],
-];
-
-
-$records = $pdo->otherBinded($sql, $bindings);
+$records = $pdo->selectNotBinded($sql);
 
 if($records === "error") {
     $response = (object) [
@@ -21,7 +16,7 @@ if($records === "error") {
 } else {
     $response = (object) [
         'masterstatus' => 'success',
-        'names' => 'All names deleted'
+        'msg' => 'All names deleted'
     ];
     echo json_encode($response);
 }

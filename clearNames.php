@@ -16,7 +16,7 @@ if($records === "error") {
 } else {
     $response = (object) [
         'masterstatus' => 'success',
-        'msg' => 'All names deleted'
+        'msg' => 'All names were deleted'
     ];
     echo json_encode($response);
 }

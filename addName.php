@@ -1,8 +1,8 @@
 <?php
 require_once '../classes/Pdo_methods.php';
-
     
 $output = "";
+
 $data = json_decode($_POST['data']);
 
 $name = $data->name;
